@@ -1,0 +1,14 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smTable="sap.ui.comp.smarttable"
+>
+<smTable:SmartTable id="smartTable4" entitySet="CRLICENSES" enableAutoBinding="true" initiallyVisibleFields="LicenseType,LicenseIssuer,ProfLicenseNumber,Country,State_Region,IssueDate,ExpirationDate">
+<smTable:customToolbar>
+<Toolbar>
+<ToolbarSpacer ></ToolbarSpacer>
+<Button icon="sap-icon://add" press="onAddTab4"/>
+</Toolbar>
+</smTable:customToolbar>
+</smTable:SmartTable>
+</c:FragmentDefinition>

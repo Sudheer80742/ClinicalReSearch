@@ -1,0 +1,77 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smform="sap.ui.comp.smartform"
+    xmlns:smfield="sap.ui.comp.smartfield"
+>
+<smform:SmartForm id="smartform2">
+                                        <smform:Group>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{InstitutionCode}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Company_InstitutionName}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Address1}"
+                                                />
+                                            </smform:GroupElement>
+                                        </smform:Group>
+                                        <smform:Group >
+                                         <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Address2}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Address3}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Address4}"
+                                                />
+                                            </smform:GroupElement>
+                                        </smform:Group>
+                                         <smform:Group >
+                                         <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{City}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{District}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Region}"
+                                                />
+                                            </smform:GroupElement>
+                                        </smform:Group>
+                                         <smform:Group >
+                                         <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{ZipCode}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Country}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Website}"
+                                                />
+                                            </smform:GroupElement>
+                                        </smform:Group>
+                                    </smform:SmartForm>
+</c:FragmentDefinition>

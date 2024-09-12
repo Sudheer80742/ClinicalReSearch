@@ -1,0 +1,41 @@
+<c:FragmentDefinition xmlns:f="sap.ui.layout.form" xmlns:smfield="sap.ui.comp.smartfield" xmlns:c="sap.ui.core" xmlns="sap.m">
+<f:SimpleForm>
+<VBox>
+<Label text="Cv"/>
+<HBox>
+<RadioButtonGroup id="id">
+<RadioButton text="Yes"/>
+<RadioButton text="No" selected="true"/>
+</RadioButtonGroup>
+</HBox>
+<HBox>
+<Label text="ScannedID"/>
+<RadioButtonGroup id="id1" >
+<RadioButton text="Yes"/>
+<RadioButton text="No" selected="true"/>
+</RadioButtonGroup>
+</HBox>
+<HBox>
+<Label text="Scannedtitle"/>
+<RadioButtonGroup id="id2">
+<RadioButton text="Yes"/>
+<RadioButton text="No" selected="true"/>
+</RadioButtonGroup>
+</HBox>
+<HBox>
+<Label text="Scannedlicense"/>
+<RadioButtonGroup id="id3">
+<RadioButton text="Yes"/>
+<RadioButton text="No" selected="true"/>
+</RadioButtonGroup>
+</HBox>
+<HBox>
+<Label text="IIATATraining"/>
+<RadioButtonGroup id="id4">
+<RadioButton text="Yes"/>
+<RadioButton text="No" selected="true"/>
+</RadioButtonGroup>
+</HBox>
+</VBox>
+</f:SimpleForm>
+</c:FragmentDefinition>

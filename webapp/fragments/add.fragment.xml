@@ -1,0 +1,56 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smform="sap.ui.comp.smartform"
+    xmlns:smfield="sap.ui.comp.smartfield"
+>
+<Dialog title="Add Clinical Researcher">
+<smform:SmartForm id="smartformAdd" editable="true">
+<smform:Group >
+<smform:GroupElement >
+<smfield:SmartField value="{SiteCode}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{SiteName}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{CRCode}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{Salutation}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{Job_ProfessionalTitle}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{CRName}"/>
+</smform:GroupElement>
+</smform:Group>
+<smform:Group>
+<smform:GroupElement >
+<smfield:SmartField value="{ClincialRhRole}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{Specialities}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{CRExperience}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{Cerofgoodclinicalprac}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{CVAvailable}"/>
+</smform:GroupElement>
+<smform:GroupElement >
+<smfield:SmartField value="{Status}"/>
+</smform:GroupElement>
+</smform:Group>
+</smform:SmartForm>
+<Toolbar >
+<ToolbarSpacer ></ToolbarSpacer>
+<Button text="Submit" press="onAdding" type="Emphasized"/>
+<Button text="Cancel" press="onCancel"/>
+</Toolbar>
+</Dialog>
+</c:FragmentDefinition>

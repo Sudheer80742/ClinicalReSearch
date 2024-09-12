@@ -1,0 +1,14 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smTable="sap.ui.comp.smarttable"
+>
+<smTable:SmartTable id="smartTable3" entitySet="ProfessionalExp" enableAutoBinding="true" initiallyVisibleFields="JobTitle,department,Yesrst,Yearcom,Remarks">
+<smTable:customToolbar>
+<Toolbar>
+<ToolbarSpacer ></ToolbarSpacer>
+<Button icon="sap-icon://add" press="onAddTab3"/>
+</Toolbar>
+</smTable:customToolbar>
+</smTable:SmartTable>
+</c:FragmentDefinition>

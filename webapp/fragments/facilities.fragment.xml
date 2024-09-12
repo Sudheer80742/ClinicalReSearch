@@ -1,0 +1,14 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smTable="sap.ui.comp.smarttable"
+>
+<smTable:SmartTable id="smartTable1" entitySet="CRFACILITIESAFFILIATIONS" enableAutoBinding="true" initiallyVisibleFields="Primaryfacility,DepartmentName,Address">
+<smTable:customToolbar>
+<Toolbar>
+<ToolbarSpacer ></ToolbarSpacer>
+<Button icon="sap-icon://add" press="onAddTab1"/>
+</Toolbar>
+</smTable:customToolbar>
+</smTable:SmartTable>
+</c:FragmentDefinition>

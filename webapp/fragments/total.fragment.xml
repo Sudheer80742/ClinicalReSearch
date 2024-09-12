@@ -1,0 +1,14 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smTable="sap.ui.comp.smarttable"
+>
+<smTable:SmartTable id="smartTable7" entitySet="totalcrexp" enableAutoBinding="true" initiallyVisibleFields="therapeuticarea,subtherapeuticarea,sponsername,CROname,Numofcomstu,Numofongstu,startdate,enddate,Status">
+<smTable:customToolbar>
+<Toolbar>
+<ToolbarSpacer ></ToolbarSpacer>
+<Button icon="sap-icon://add" press="onAddTab7"/>
+</Toolbar>
+</smTable:customToolbar>
+</smTable:SmartTable>
+</c:FragmentDefinition>

@@ -1,0 +1,14 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smTable="sap.ui.comp.smarttable"
+>
+<smTable:SmartTable id="smartTable5" entitySet="GCPTRAININGS" enableAutoBinding="true" initiallyVisibleFields="TrainingProvider,TitleofTraining,Version,DateofCompleted,Status">
+<smTable:customToolbar>
+<Toolbar>
+<ToolbarSpacer ></ToolbarSpacer>
+<Button icon="sap-icon://add" press="onAddTab5"/>
+</Toolbar>
+</smTable:customToolbar>
+</smTable:SmartTable>
+</c:FragmentDefinition>

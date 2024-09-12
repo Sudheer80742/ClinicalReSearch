@@ -1,0 +1,31 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smform="sap.ui.comp.smartform"
+    xmlns:smfield="sap.ui.comp.smartfield"
+>
+ <smform:SmartForm id="smartform3">
+                                        <smform:Group >
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Officetelephone}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Extension}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{EmailId}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Mobilenumber}"
+                                                />
+                                            </smform:GroupElement>
+                                        </smform:Group>
+                                    </smform:SmartForm>
+</c:FragmentDefinition>
