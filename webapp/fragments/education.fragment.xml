@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable2" entitySet="CREducation" enableAutoBinding="true" initiallyVisibleFields="Certificate,Institution,SpecialitiesDescription,YearCompleted">
+<smTable:SmartTable id="smartTable2" entitySet="CREducation" tableBindingPath="to_EDUCATION" enableAutoBinding="true" initiallyVisibleFields="Certificate,Institution,SpecialitiesDescription,YearCompleted">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>

@@ -59,7 +59,7 @@ sap.ui.define([
             },
             onColumnListItemPress(oEvent) {
                 this._route.navTo("RouteView2", {
-                    path: window.encodeURIComponent(oEvent.getSource().getBindingContext())
+                    path: window.encodeURIComponent(oEvent.getSource().getBindingContext().getPath())
                 })
             },
             onDelete() {

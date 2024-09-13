@@ -1,0 +1,43 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smform="sap.ui.comp.smartform"
+    xmlns:smfield="sap.ui.comp.smartfield"
+>
+<Dialog>
+ <smform:SmartForm id="smartformAdd2" editable="true">
+                                        <smform:Group>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    editable="false"
+                                                    value="{SiteCode}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Certificate}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Institution}"
+                                                />
+                                            </smform:GroupElement>
+                                              <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{SpecialitiesDescription}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{YearCompleted}"
+                                                />
+                                            </smform:GroupElement>
+                                        </smform:Group>
+                                    </smform:SmartForm>
+                                    <Toolbar >
+                                    <Button text="save" press="onSave2"/>
+                                    <Button text="cancel" press="onClose2"/>
+                                    </Toolbar>
+                                    </Dialog>
+</c:FragmentDefinition>

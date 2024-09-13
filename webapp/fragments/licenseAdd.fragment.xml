@@ -1,0 +1,49 @@
+<!-- JobTitle,department,Yesrst,Yearcom,Remarks -->
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+    xmlns:smform="sap.ui.comp.smartform"
+    xmlns:smfield="sap.ui.comp.smartfield"
+>
+<Dialog>
+ <smform:SmartForm id="smartformAdd3" editable="true">
+                                        <smform:Group>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    editable="false"
+                                                    value="{SiteCode}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{JobTitle}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{department}"
+                                                />
+                                            </smform:GroupElement>
+                                              <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Yesrst}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Yearcom}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Remarks}"
+                                                />
+                                            </smform:GroupElement>
+                                        </smform:Group>
+                                    </smform:SmartForm>
+                                    <Toolbar >
+                                    <Button text="save" press="onSave3"/>
+                                    <Button text="cancel" press="onClose3"/>
+                                    </Toolbar>
+                                    </Dialog>
+</c:FragmentDefinition>

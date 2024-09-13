@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable1" entitySet="CRFACILITIESAFFILIATIONS" enableAutoBinding="true" initiallyVisibleFields="Primaryfacility,DepartmentName,Address">
+<smTable:SmartTable id="smartTable1" entitySet="CRFACILITIESAFFILIATIONS"  tableBindingPath="to_CRFACILITIESAFFILIATIONS" enableAutoBinding="true" initiallyVisibleFields="Primaryfacility,DepartmentName,Address">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>
