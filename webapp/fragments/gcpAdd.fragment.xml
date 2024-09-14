@@ -1,4 +1,4 @@
-<!-- JobTitle,department,Yesrst,Yearcom,Remarks -->
+<!-- TrainingProvider,TitleofTraining,Version,DateofCompleted,Status -->
 <c:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
@@ -6,7 +6,7 @@
     xmlns:smfield="sap.ui.comp.smartfield"
 >
 <Dialog>
- <smform:SmartForm id="smartformAdd3" editable="true">
+ <smform:SmartForm id="smartformAdd5" editable="true">
                                         <smform:Group>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
@@ -16,35 +16,35 @@
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{JobTitle}"
+                                                    value="{TrainingProvider}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{department}"
+                                                    value="{TitleofTraining}"
                                                 />
                                             </smform:GroupElement>
                                               <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Yesrst}"
+                                                    value="{Version}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Yearcom}"
+                                                    value="{DateofCompleted}"
                                                 />
                                             </smform:GroupElement>
                                              <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Remarks}"
+                                                    value="{Status}"
                                                 />
                                             </smform:GroupElement>
                                         </smform:Group>
                                     </smform:SmartForm>
                                     <Toolbar >
                                      <ToolbarSpacer ></ToolbarSpacer>
-                                    <Button text="save" press="onSave3"/>
-                                    <Button text="cancel" press="onClose3"/>
+                                    <Button text="save" press="onSave5"/>
+                                    <Button text="cancel" press="onClose5"/>
                                     </Toolbar>
                                     </Dialog>
 </c:FragmentDefinition>

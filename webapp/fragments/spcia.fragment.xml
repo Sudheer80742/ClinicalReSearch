@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable6" entitySet="specialitiessubs" enableAutoBinding="true" initiallyVisibleFields="Specialities,SubSpecialities">
+<smTable:SmartTable id="smartTable6" entitySet="specialitiessubs" tableBindingPath="to_specialitiessubs" enableAutoBinding="true" initiallyVisibleFields="Specialities,SubSpecialities">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>

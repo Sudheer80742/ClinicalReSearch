@@ -1,4 +1,4 @@
-<!-- JobTitle,department,Yesrst,Yearcom,Remarks -->
+<!-- LicenseType,LicenseIssuer,ProfLicenseNumber,Country,State_Region,IssueDate,ExpirationDate -->
 <c:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
@@ -6,7 +6,7 @@
     xmlns:smfield="sap.ui.comp.smartfield"
 >
 <Dialog>
- <smform:SmartForm id="smartformAdd3" editable="true">
+ <smform:SmartForm id="smartformAdd4" editable="true">
                                         <smform:Group>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
@@ -16,35 +16,45 @@
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{JobTitle}"
+                                                    value="{LicenseType}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{department}"
+                                                    value="{LicenseIssuer}"
                                                 />
                                             </smform:GroupElement>
                                               <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Yesrst}"
+                                                    value="{ProfLicenseNumber}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Yearcom}"
+                                                    value="{Country}"
                                                 />
                                             </smform:GroupElement>
                                              <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Remarks}"
+                                                    value="{State_Region}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{IssueDate}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{ExpirationDate}"
                                                 />
                                             </smform:GroupElement>
                                         </smform:Group>
                                     </smform:SmartForm>
                                     <Toolbar >
                                      <ToolbarSpacer ></ToolbarSpacer>
-                                    <Button text="save" press="onSave3"/>
-                                    <Button text="cancel" press="onClose3"/>
+                                    <Button text="save" press="onSave4"/>
+                                    <Button text="cancel" press="onClose4"/>
                                     </Toolbar>
                                     </Dialog>
 </c:FragmentDefinition>

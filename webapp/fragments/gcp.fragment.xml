@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable5" entitySet="GCPTRAININGS" enableAutoBinding="true" initiallyVisibleFields="TrainingProvider,TitleofTraining,Version,DateofCompleted,Status">
+<smTable:SmartTable id="smartTable5" entitySet="GCPTRAININGS" tableBindingPath="to_GCPTRAININGS" enableAutoBinding="true" initiallyVisibleFields="TrainingProvider,TitleofTraining,Version,DateofCompleted,Status">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>

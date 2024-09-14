@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable3" entitySet="ProfessionalExp" tableBindingPath="" enableAutoBinding="true" initiallyVisibleFields="JobTitle,department,Yesrst,Yearcom,Remarks">
+<smTable:SmartTable id="smartTable3" entitySet="ProfessionalExp" tableBindingPath="to_PROEXP" enableAutoBinding="true" initiallyVisibleFields="JobTitle,department,Yesrst,Yearcom,Remarks">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>

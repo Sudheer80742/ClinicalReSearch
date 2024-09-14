@@ -1,4 +1,4 @@
-<!-- JobTitle,department,Yesrst,Yearcom,Remarks -->
+<!-- DocCategory,DocName,Avialability,DocStatus,EndDate,Remarks,startdate,enddate,Status -->
 <c:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
@@ -6,45 +6,65 @@
     xmlns:smfield="sap.ui.comp.smartfield"
 >
 <Dialog>
- <smform:SmartForm id="smartformAdd3" editable="true">
+ <smform:SmartForm id="smartformAdd8" editable="true">
                                         <smform:Group>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
                                                     editable="false"
-                                                    value="{SiteCode}"
+                                                    value="{Sitecode}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{JobTitle}"
+                                                    value="{DocCategory}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{department}"
+                                                    value="{DocName}"
                                                 />
                                             </smform:GroupElement>
                                               <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Yesrst}"
+                                                    value="{Avialability}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Yearcom}"
+                                                    value="{DocStatus}"
                                                 />
                                             </smform:GroupElement>
                                              <smform:GroupElement>
                                                 <smfield:SmartField
+                                                    value="{EndDate}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
                                                     value="{Remarks}"
+                                                />
+                                            </smform:GroupElement>
+                                            <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{startdate}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{enddate}"
+                                                />
+                                            </smform:GroupElement>
+                                             <smform:GroupElement>
+                                                <smfield:SmartField
+                                                    value="{Status}"
                                                 />
                                             </smform:GroupElement>
                                         </smform:Group>
                                     </smform:SmartForm>
                                     <Toolbar >
                                      <ToolbarSpacer ></ToolbarSpacer>
-                                    <Button text="save" press="onSave3"/>
-                                    <Button text="cancel" press="onClose3"/>
+                                    <Button text="save" press="onSave8"/>
+                                    <Button text="cancel" press="onClose8"/>
                                     </Toolbar>
                                     </Dialog>
 </c:FragmentDefinition>

@@ -1,3 +1,4 @@
+<!-- Specialities,SubSpecialities -->
 <c:FragmentDefinition
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
@@ -5,35 +6,30 @@
     xmlns:smfield="sap.ui.comp.smartfield"
 >
 <Dialog>
- <smform:SmartForm id="smartformAdd1" editable="true">
+ <smform:SmartForm id="smartformAdd6" editable="true">
                                         <smform:Group>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
                                                     editable="false"
-                                                    value="{SiteCode}"
+                                                    value="{Sitecode}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{Primaryfacility}"
+                                                    value="{Specialities}"
                                                 />
                                             </smform:GroupElement>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
-                                                    value="{DepartmentName}"
-                                                />
-                                            </smform:GroupElement>
-                                              <smform:GroupElement>
-                                                <smfield:SmartField
-                                                    value="{Address}"
+                                                    value="{SubSpecialities}"
                                                 />
                                             </smform:GroupElement>
                                         </smform:Group>
                                     </smform:SmartForm>
                                     <Toolbar >
                                      <ToolbarSpacer ></ToolbarSpacer>
-                                    <Button text="save" press="onSave1"/>
-                                    <Button text="cancel" press="onClose"/>
+                                    <Button text="save" press="onSave6"/>
+                                    <Button text="cancel" press="onClose6"/>
                                     </Toolbar>
                                     </Dialog>
 </c:FragmentDefinition>

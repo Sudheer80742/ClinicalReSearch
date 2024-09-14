@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable8" entitySet="CRregulatoryinformation" enableAutoBinding="true" initiallyVisibleFields="DocCategory,DocName,Avialability,DocStatus,EndDate,Remarks,startdate,enddate,Status">
+<smTable:SmartTable id="smartTable8" entitySet="CRregulatoryinformation" tableBindingPath="to_CRregulatoryInfo" enableAutoBinding="true" initiallyVisibleFields="DocCategory,DocName,Avialability,DocStatus,EndDate,Remarks,startdate,enddate,Status">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>

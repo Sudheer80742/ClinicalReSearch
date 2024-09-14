@@ -36,6 +36,7 @@
                                         </smform:Group>
                                     </smform:SmartForm>
                                     <Toolbar >
+                                     <ToolbarSpacer ></ToolbarSpacer>
                                     <Button text="save" press="onSave2"/>
                                     <Button text="cancel" press="onClose2"/>
                                     </Toolbar>

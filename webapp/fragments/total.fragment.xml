@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable7" entitySet="totalcrexp" enableAutoBinding="true" initiallyVisibleFields="therapeuticarea,subtherapeuticarea,sponsername,CROname,Numofcomstu,Numofongstu,startdate,enddate,Status">
+<smTable:SmartTable id="smartTable7" entitySet="totalcrexp" tableBindingPath="to_TCREXP" enableAutoBinding="true" initiallyVisibleFields="therapeuticarea,subtherapeuticarea,sponsername,CROname,Numofcomstu,Numofongstu,startdate,enddate,Status">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>

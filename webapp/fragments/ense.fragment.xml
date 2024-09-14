@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
 >
-<smTable:SmartTable id="smartTable4" entitySet="CRLICENSES" enableAutoBinding="true" initiallyVisibleFields="LicenseType,LicenseIssuer,ProfLicenseNumber,Country,State_Region,IssueDate,ExpirationDate">
+<smTable:SmartTable id="smartTable4" entitySet="CRLICENSES" tableBindingPath="to_CRLicenses" enableAutoBinding="true" initiallyVisibleFields="LicenseType,LicenseIssuer,ProfLicenseNumber,Country,State_Region,IssueDate,ExpirationDate">
 <smTable:customToolbar>
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>
