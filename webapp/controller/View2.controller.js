@@ -37,6 +37,7 @@ sap.ui.define([
         _oRoutes(oEvent) {
             var sPath = window.decodeURIComponent(oEvent.getParameter("arguments").path);
             this.getView().bindElement({ path: sPath })
+            this._onEditChange(false)
         },
         _onEditChange(id) {
             this.byId("save").setVisible(id)
@@ -104,7 +105,7 @@ sap.ui.define([
         _onSubmit(oEvent){
             this._owner.submitChanges({
                 success: (oData) =>{
-                    MessageToast.show("Data Updated successfully")
+                    MessageToast.show("Data Added successfully")
                     oEvent.getSource().getParent().getParent().close();
                 },
                 error: (oError) => {
@@ -158,7 +159,7 @@ sap.ui.define([
             this._onSubmit(oEvent);
         },
         onAddTab6(oEvent){
-            this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.spciaAdd")
+            this._onAddTab1(oEvent,"rbx.107.clinicalresearcher.fragments.spciaAdd")
         },
         onClose6(oEvent){
             this._onClose(oEvent);
@@ -167,7 +168,7 @@ sap.ui.define([
             this._onSubmit(oEvent);
         },
         onAddTab7(oEvent){
-            this._onAddTab1(oEvent,"rbx.107.clinicalresearcher.fragments.totalAdd")
+            this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.totalAdd")
         },
         onClose7(oEvent){
             this._onClose(oEvent);
