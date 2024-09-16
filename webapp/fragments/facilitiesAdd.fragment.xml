@@ -33,7 +33,7 @@
                                     <Toolbar >
                                      <ToolbarSpacer ></ToolbarSpacer>
                                     <Button text="save" press="onSave1"/>
-                                    <Button text="cancel" press="onClose"/>
+                                    <Button text="cancel" press="onClose1"/>
                                     </Toolbar>
                                     </Dialog>
 </c:FragmentDefinition>

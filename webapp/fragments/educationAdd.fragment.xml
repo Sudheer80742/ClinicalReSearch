@@ -37,8 +37,8 @@
                                     </smform:SmartForm>
                                     <Toolbar >
                                      <ToolbarSpacer ></ToolbarSpacer>
-                                    <Button text="save" press="onSave2"/>
-                                    <Button text="cancel" press="onClose2"/>
+                                    <Button text="save" press="onSave1"/>
+                                    <Button text="cancel" press="onClose1"/>
                                     </Toolbar>
                                     </Dialog>
 </c:FragmentDefinition>

@@ -8,6 +8,7 @@
 <Toolbar>
 <ToolbarSpacer ></ToolbarSpacer>
 <Button icon="sap-icon://add" press="onAddTab5"/>
+<Button icon="sap-icon://delete" press="ondel1"/>
 </Toolbar>
 </smTable:customToolbar>
 </smTable:SmartTable>

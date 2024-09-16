@@ -62,7 +62,7 @@ sap.ui.define([
                 error: (oError) => {
                     MessageToast.show("Error", oError)
                 }
-            })
+            },{groupId:"update"})
         },
         onCan(oEvent) {
             this._onEditChange(false)
@@ -74,25 +74,19 @@ sap.ui.define([
             var sPath=oEvent.getSource().getBindingContext().getPath();
             var tablePath=oEvent.getSource().getParent().getParent().getTableBindingPath();
             var oBj=oEvent.getSource().getBindingContext().getObject();
-            var oContext=this._owner.createEntry(`${sPath}/${tablePath}`,{
-                groupId:"create",
-                properties:{
-                    SiteCode:oBj.SiteCode
-                }
-            });
-            this._openFragment(path).then((oFrag)=>{
-                oFrag.setBindingContext(oContext);
-                oFrag.open();})
-        },
-        _onAddTab1(oEvent,path){
-            var sPath=oEvent.getSource().getBindingContext().getPath();
-            var tablePath=oEvent.getSource().getParent().getParent().getTableBindingPath();
-            var oBj=oEvent.getSource().getBindingContext().getObject();
-            var oContext=this._owner.createEntry(`${sPath}/${tablePath}`,{
-                groupId:"create",
-                properties:{
+            var sc;
+            if(path==="rbx.107.clinicalresearcher.fragments.spciaAdd" || path==="rbx.107.clinicalresearcher.fragments.regulatoryAdd"){
+                sc={
                     Sitecode:oBj.SiteCode
                 }
+            }else{
+                sc={
+                    SiteCode:oBj.SiteCode
+                }
+            }
+            var oContext=this._owner.createEntry(`${sPath}/${tablePath}`,{
+                groupId:"create",
+                properties:sc
             });
             this._openFragment(path).then((oFrag)=>{
                 oFrag.setBindingContext(oContext);
@@ -113,10 +107,29 @@ sap.ui.define([
                 }
         })
     },
+        _onDelete(oEvent){
+            var oSmart=oEvent.getSource().getParent().getParent();
+            var oTable=oSmart.getTable();
+            var oSelect=oTable.getSelectedIndices();
+            oSelect.forEach((oele)=>{
+            var oBinding = oTable.getContextByIndex(oele).getPath();
+                this._owner.remove(oBinding, {
+                    success: (oData) => {
+                        MessageToast.show("Data Deleted successfully")
+                    },
+                    error: (oError) => {
+                        MessageToast.show("Error", oError);
+                    }
+                })
+        })
+            },
+        ondel1(oev){
+            this._onDelete(oev)
+        },
         onAddTab1(oEvent){
             this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.facilitiesAdd");
         },
-        onClose(oEvent){
+        onClose1(oEvent){
             this._onClose(oEvent)
         },
         onSave1(oEvent){
@@ -125,65 +138,23 @@ sap.ui.define([
         onAddTab2(oEvent){
             this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.educationAdd")
         },
-        onClose2(oEvent){
-            this._onClose(oEvent);
-        },
-        onSave2(oEvent){
-            this._onSubmit(oEvent);
-        },
         onAddTab3(oEvent){
             this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.licenseAdd")
-        },
-        onClose3(oEvent){
-            this._onClose(oEvent);
-        },
-        onSave3(oEvent){
-            this._onSubmit(oEvent);
         },
         onAddTab4(oEvent){
             this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.enseAdd")
         },
-        onClose4(oEvent){
-            this._onClose(oEvent);
-        },
-        onSave4(oEvent){
-            this._onSubmit(oEvent);
-        },
         onAddTab5(oEvent){
             this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.gcpAdd")
         },
-        onClose5(oEvent){
-            this._onClose(oEvent);
-        },
-        onSave5(oEvent){
-            this._onSubmit(oEvent);
-        },
         onAddTab6(oEvent){
-            this._onAddTab1(oEvent,"rbx.107.clinicalresearcher.fragments.spciaAdd")
-        },
-        onClose6(oEvent){
-            this._onClose(oEvent);
-        },
-        onSave6(oEvent){
-            this._onSubmit(oEvent);
+            this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.spciaAdd")
         },
         onAddTab7(oEvent){
             this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.totalAdd")
         },
-        onClose7(oEvent){
-            this._onClose(oEvent);
-        },
-        onSave7(oEvent){
-            this._onSubmit(oEvent);
-        },
         onAddTab8(oEvent){
-            this._onAddTab1(oEvent,"rbx.107.clinicalresearcher.fragments.regulatoryAdd")
-        },
-        onClose8(oEvent){
-            this._onClose(oEvent);
-        },
-        onSave8(oEvent){
-            this._onSubmit(oEvent);
+            this._onAddTab(oEvent,"rbx.107.clinicalresearcher.fragments.regulatoryAdd")
         }
     });
 });
