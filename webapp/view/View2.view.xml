@@ -8,7 +8,14 @@
 >
     <m:Page>
         <m:content>
-            <m:Toolbar>
+            <ObjectPageLayout>
+                <headerTitle>
+                    <ObjectPageDynamicHeaderTitle>
+                    <heading>
+                    <m:Title text="{CRCode}" />
+                    </heading>
+                    <actions>
+                    <m:Toolbar>
                 <m:ToolbarSpacer />
                 <m:Button
                     type="Emphasized"
@@ -16,9 +23,8 @@
                     text="Edit"
                 />
             </m:Toolbar>
-            <ObjectPageLayout>
-                <headerTitle>
-                    <ObjectPageHeader objectTitle="{CRCode}" />
+                    </actions>
+                    </ObjectPageDynamicHeaderTitle>
                 </headerTitle>
                 <headerContent>
                     <m:Text text="{CRName}" />
@@ -203,7 +209,7 @@
                     </ObjectPageSection>
                 </sections>
             </ObjectPageLayout>
-            <m:Toolbar>
+            <m:OverflowToolbar>
                 <m:ToolbarSpacer />
                 <m:Button
                     press="onSave"
@@ -223,7 +229,7 @@
                     visible="false"
                     id="can"
                 />
-            </m:Toolbar>
+            </m:OverflowToolbar>
         </m:content>
     </m:Page>
 </mvc:View>

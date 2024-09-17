@@ -8,7 +8,6 @@
             entitySet="CRGendata"
             enableAutoBinding="true"
             initiallyVisibleFields="SiteCode,SiteName,CRCode,CRName,Specialities,CVAvailable,Status"
-            showRowCount="true"
             id="smarttable"
             >
             <sm:customToolbar>
@@ -16,11 +15,12 @@
                 <Title text="Clinical Research"/>
                 <SearchField search="onSearch" width="40%"/>
                 <ToolbarSpacer ></ToolbarSpacer>
+                <Button icon="sap-icon://sort" press="onSort"/> 
                 <Button icon="sap-icon://add" press="onAdd"/>
-                <Button icon="sap-icon://delete" press="onDelete"/>
+                <Button icon="sap-icon://delete" press="onDelete" enabled="false" id="del1"/>
                 </Toolbar>
             </sm:customToolbar>
-            <Table mode="MultiSelect">
+            <Table mode="MultiSelect" selectionChange="onSelectionItem">
             <ColumnListItem type="Active" press="onColumnListItemPress"/>
             </Table>
             </sm:SmartTable>

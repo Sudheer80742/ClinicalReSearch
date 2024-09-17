@@ -1,0 +1,9 @@
+<c:FragmentDefinition xmlns:c="sap.ui.core" xmlns="sap.m">
+<ViewSettingsDialog confirm="onSortItems">
+<sortItems>
+<ViewSettingsItem key="SiteCode" text="SiteCode" selected="true"/>
+<ViewSettingsItem key="SiteName" text="SiteName"/>
+<ViewSettingsItem key="CRCode" text="CRCode"/>
+</sortItems>
+</ViewSettingsDialog>
+</c:FragmentDefinition>

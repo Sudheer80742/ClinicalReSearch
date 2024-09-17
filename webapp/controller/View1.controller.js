@@ -1,7 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller", "sap/ui/core/Fragment", "sap/m/MessageToast", "sap/ui/model/Filter"
+    "sap/ui/core/mvc/Controller", "sap/ui/core/Fragment", "sap/m/MessageToast", "sap/ui/model/Filter","sap/ui/model/Sorter"
 ],
-    function (Controller, Fragment, MessageToast, Filter) {
+    function (Controller, Fragment, MessageToast, Filter, Sorter) {
         "use strict";
 
         return Controller.extend("rbx.107.clinicalresearcher.controller.View1", {
@@ -12,7 +12,7 @@ sap.ui.define([
                 this.mDialog = {}
             },
             onFragmentLoad(path) {
-                var oDialog = this.mDialog[path]
+                var oDialog = this.mDialog[path];
                 if (!oDialog) {
                     return Fragment.load({
                         id: path,
@@ -62,10 +62,23 @@ sap.ui.define([
                     path: window.encodeURIComponent(oEvent.getSource().getBindingContext().getPath())
                 })
             },
+            onSelectionItem(){
+                var oSmart = this.byId("smarttable");
+                var oTable = oSmart.getTable();
+                var oSelected = oTable.getSelectedItems();
+                var oSelect=this.byId("del1")
+                if(oSelected.length>0){
+                    oSelect.setEnabled(true)
+                }else{oSelect.setEnabled(false)}
+            },
             onDelete() {
                 var oSmart = this.byId("smarttable");
                 var oTable = oSmart.getTable();
                 var oSelected = oTable.getSelectedItems();
+                if(oSelected==0){
+                    MessageToast.show("Please select a row to delete")
+                    return
+                }
                 oSelected.forEach((oEle) => {
                     var oBinding = oEle.getBindingContext().getPath();
                     this._owner.remove(oBinding, {
@@ -94,6 +107,22 @@ sap.ui.define([
                     and: false
                 })
                 oBinding.filter(oFill);
+            },
+            onSort(){
+                this.onFragmentLoad("rbx.107.clinicalresearcher.fragments.sort").then((ofrag)=>{
+                    ofrag.open();
+                })
+            },
+            onSortItems(oEvent){
+                var mParams=oEvent.getParameters();
+                var sPath=mParams.sortItem.getKey();
+                var sDecending=mParams.sortDescending;
+                var s=[];
+                s.push(new Sorter(sPath,sDecending));
+                var oSmart = this.byId("smarttable");
+                var oBinding = oSmart.getTable().getBinding("items");
+                oBinding.sort(s);
             }
+
         });
     });

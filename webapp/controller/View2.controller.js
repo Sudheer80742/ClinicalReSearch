@@ -111,6 +111,10 @@ sap.ui.define([
             var oSmart=oEvent.getSource().getParent().getParent();
             var oTable=oSmart.getTable();
             var oSelect=oTable.getSelectedIndices();
+            if(oSelect.length==0){
+                MessageToast.show("please Select a row to delete")
+                return;
+            }
             oSelect.forEach((oele)=>{
             var oBinding = oTable.getContextByIndex(oele).getPath();
                 this._owner.remove(oBinding, {
