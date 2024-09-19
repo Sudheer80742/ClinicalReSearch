@@ -1,10 +1,12 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
+    "sap/m/MessageBox",
     "sap/ui/core/Fragment"
 ], function (
     Controller,
     MessageToast,
+    MessageBox,
     Fragment
 ) {
     "use strict";
@@ -47,7 +49,22 @@ sap.ui.define([
         onEdit(oEvent) {
             this.getView().getModel("data").setProperty("/isEditable", true);
         },
-        onDel(oEvent) {
+        onDel(){
+            MessageBox.warning(
+                "Are You Confirm to Delete",
+                {
+                    icon: MessageBox.Icon.WARNING,
+                    title: "Confirm To Delete",
+                    actions: ["Confirm", MessageBox.Action.CANCEL],
+                    emphasizedAction: "Confirm",
+                    onClose:(sAction)=>{
+                        if(sAction === "Confirm"){
+                            this.onDel1()
+                        }
+                    }
+                })
+        },
+        onDel1(oEvent) {
             this._owner.remove(this.sPath, {
                 success: (oData) => {
                     this._route.navTo("RouteView1")
