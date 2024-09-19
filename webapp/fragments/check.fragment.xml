@@ -1,40 +1,32 @@
 <c:FragmentDefinition xmlns:f="sap.ui.layout.form" xmlns:smfield="sap.ui.comp.smartfield" xmlns:c="sap.ui.core" xmlns="sap.m">
 <f:SimpleForm>
 <VBox>
-<Label text="Cv"/>
+<Label text="Speciality CIE-10: -"/>
+<ToolbarSpacer ></ToolbarSpacer>
 <HBox>
-<RadioButtonGroup id="id">
-<RadioButton text="Yes"/>
-<RadioButton text="No" selected="true"/>
-</RadioButtonGroup>
+<Label text="Cv"/>
+<RadioButton text="Yes" groupName="id"/>
+<RadioButton text="No" selected="true" groupName="id"/>
 </HBox>
 <HBox>
 <Label text="ScannedID"/>
-<RadioButtonGroup id="id1" >
-<RadioButton text="Yes"/>
-<RadioButton text="No" selected="true"/>
-</RadioButtonGroup>
+<RadioButton text="Yes" groupName="id1"/>
+<RadioButton text="No" selected="true" groupName="id1"/>
 </HBox>
 <HBox>
 <Label text="Scannedtitle"/>
-<RadioButtonGroup id="id2">
-<RadioButton text="Yes"/>
-<RadioButton text="No" selected="true"/>
-</RadioButtonGroup>
+<RadioButton text="Yes" groupName="id2"/>
+<RadioButton text="No" selected="true" groupName="id2"/>
 </HBox>
 <HBox>
 <Label text="Scannedlicense"/>
-<RadioButtonGroup id="id3">
-<RadioButton text="Yes"/>
-<RadioButton text="No" selected="true"/>
-</RadioButtonGroup>
+<RadioButton text="Yes" groupName="id3"/>
+<RadioButton text="No" selected="true" groupName="id3"/>
 </HBox>
-<HBox>
+<HBox >
 <Label text="IIATATraining"/>
-<RadioButtonGroup id="id4">
-<RadioButton text="Yes"/>
-<RadioButton text="No" selected="true"/>
-</RadioButtonGroup>
+<RadioButton text="Yes" groupName="id4"/>
+<RadioButton text="No" selected="true" groupName="id4"/>
 </HBox>
 </VBox>
 </f:SimpleForm>

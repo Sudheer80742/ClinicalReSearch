@@ -1,235 +1,231 @@
 <mvc:View
-    displayBlock="true"
     xmlns:core="sap.ui.core"
     xmlns="sap.uxap"
     xmlns:m="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="rbx.107.clinicalresearcher.controller.View2"
 >
-    <m:Page>
-        <m:content>
-            <ObjectPageLayout>
-                <headerTitle>
-                    <ObjectPageDynamicHeaderTitle>
-                    <heading>
+    <ObjectPageLayout
+        id="ob1"
+        showFooter="{data>/isEditable}"
+    >
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <heading>
                     <m:Title text="{CRCode}" />
-                    </heading>
-                    <actions>
-                    <m:Toolbar>
-                <m:ToolbarSpacer />
-                <m:Button
-                    type="Emphasized"
-                    press="onEdit"
-                    text="Edit"
-                />
-            </m:Toolbar>
-                    </actions>
-                    </ObjectPageDynamicHeaderTitle>
-                </headerTitle>
-                <headerContent>
-                    <m:Text text="{CRName}" />
-                </headerContent>
-                <sections>
-                    <ObjectPageSection
-                        title="General"
-                        titleUppercase="false"
-                    >
-                        <subSections>
-                            <ObjectPageSubSection
-                                title="Name and Title"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.name"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Clinical Phase of Conducted Studies"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.clinicalPhase"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Company, Critical Contact Address"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.company"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Communication"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.communication"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Facilities Affiliations"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.facilities"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Education"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.education"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                        </subSections>
-                    </ObjectPageSection>
-                    <ObjectPageSection
-                        title="License Details"
-                        titleUppercase="false"
-                    >
-                        <subSections>
-                            <ObjectPageSubSection>
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.license"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="License/ENSE"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.ense"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="GCP Training"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.gcp"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection>
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.study"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Specialities/ SubSpecialities"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.spcia"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Total Clinical Research Experience"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.total"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Check List"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.check"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                            <ObjectPageSubSection
-                                title="Regulatory Information"
-                                titleUppercase="false"
-                            >
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.regulatory"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                        </subSections>
-                    </ObjectPageSection>
-                    <ObjectPageSection
-                        title="Log Details"
-                        titleUppercase="false"
-                    >
-                        <subSections>
-                            <ObjectPageSubSection>
-                                <blocks>
-                                    <core:Fragment
-                                        type="XML"
-                                        fragmentName="rbx.107.clinicalresearcher.fragments.login"
-                                    />
-                                </blocks>
-                            </ObjectPageSubSection>
-                        </subSections>
-                    </ObjectPageSection>
-                </sections>
-            </ObjectPageLayout>
-            <m:OverflowToolbar>
+                </heading>
+                <actions>
+                        <m:Button
+                            type="Emphasized"
+                            press="onEdit"
+                            text="Edit"
+                        />
+                        <m:Button
+                            press="onDel"
+                            text="Delete"
+                            type="Reject"
+                        />
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+        <headerContent>
+            <m:Text text="{CRName}" />
+        </headerContent>
+        <footer>
+            <m:OverflowToolbar >
                 <m:ToolbarSpacer />
                 <m:Button
                     press="onSave"
                     text="Save"
-                    visible="false"
-                    id="save"
                 />
-                 <m:Button
+                <m:Button
                     press="onDiscard"
                     text="Discard Changes"
-                    visible="false"
-                    id="dis"
                 />
                 <m:Button
                     press="onCan"
                     text="cancel"
-                    visible="false"
-                    id="can"
                 />
             </m:OverflowToolbar>
-        </m:content>
-    </m:Page>
+        </footer>
+        <sections>
+            <ObjectPageSection
+                title="General"
+                titleUppercase="false"
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Name and Title"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.name"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Clinical Phase of Conducted Studies"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.clinicalPhase"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Company, Critical Contact Address"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.company"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Communication"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.communication"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Facilities Affiliations"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.facilities"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Education"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.education"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                title="License Details"
+                titleUppercase="false"
+            >
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.license"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="License/ENSE"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.ense"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="GCP Training"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.gcp"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.study"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Specialities/ SubSpecialities"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.spcia"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Total Clinical Research Experience"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.total"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Check List"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.check"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection
+                        title="Regulatory Information"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.regulatory"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                title="Log Details"
+                titleUppercase="false"
+            >
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <core:Fragment
+                                type="XML"
+                                fragmentName="rbx.107.clinicalresearcher.fragments.login"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
 </mvc:View>

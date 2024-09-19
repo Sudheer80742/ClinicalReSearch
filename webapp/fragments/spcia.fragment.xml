@@ -1,15 +1,31 @@
 <c:FragmentDefinition
-	xmlns="sap.m"
-	xmlns:c="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
     xmlns:smTable="sap.ui.comp.smarttable"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
-<smTable:SmartTable id="smartTable6" entitySet="specialitiessubs" tableBindingPath="to_specialitiessubs" enableAutoBinding="true" initiallyVisibleFields="Specialities,SubSpecialities">
-<smTable:customToolbar>
-<Toolbar>
-<ToolbarSpacer ></ToolbarSpacer>
-<Button icon="sap-icon://add" press="onAddTab6"/>
-<Button icon="sap-icon://delete" press="ondel1"/>
-</Toolbar>
-</smTable:customToolbar>
-</smTable:SmartTable>
+    <smTable:SmartTable
+        id="smartTable6"
+        entitySet="specialitiessubs"
+		app:useSmartField="true"
+        editable="{data>/isEditable}"
+        tableBindingPath="to_specialitiessubs"
+        enableAutoBinding="true"
+        initiallyVisibleFields="Specialities,SubSpecialities"
+    >
+        <smTable:customToolbar>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    icon="sap-icon://add"
+                    press="onAddTab6"
+                />
+                <Button
+                    icon="sap-icon://delete"
+                    press="ondel1"
+                />
+            </Toolbar>
+        </smTable:customToolbar>
+    </smTable:SmartTable>
 </c:FragmentDefinition>

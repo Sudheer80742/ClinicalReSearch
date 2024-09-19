@@ -1,17 +1,17 @@
-<c:FragmentDefinition
-	xmlns="sap.m"
-	xmlns:c="sap.ui.core"
-    xmlns:smform="sap.ui.comp.smartform"
-    xmlns:smfield="sap.ui.comp.smartfield"
->
- <smform:SmartForm id="smartform1">
-                                        <smform:Group>
-                                            <smform:GroupElement>
-                                                <smfield:SmartField
-                                                    value="{StudyPhaseType}"
-                                                    entitySet="ClinicalPOCSites"
-                                                />
-                                            </smform:GroupElement>
-                                        </smform:Group>
-                                    </smform:SmartForm>
-</c:FragmentDefinition>
+        <c:FragmentDefinition
+            xmlns="sap.m"
+            xmlns:c="sap.ui.core"
+            xmlns:smform="sap.ui.comp.smartform"
+            xmlns:smfield="sap.ui.comp.smartfield"
+        >
+        <smform:SmartForm id="smartform1" editable="{data>/isEditable}">
+                                                <smform:Group>
+                                                    <smform:GroupElement>
+                                                        <smfield:SmartField
+                                                            value="{StudyPhaseType}"
+                                                            entitySet="ClinicalPOCSites"
+                                                        />
+                                                    </smform:GroupElement>
+                                                </smform:Group>
+                                            </smform:SmartForm>
+        </c:FragmentDefinition>

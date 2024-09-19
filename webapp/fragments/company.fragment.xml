@@ -4,7 +4,7 @@
     xmlns:smform="sap.ui.comp.smartform"
     xmlns:smfield="sap.ui.comp.smartfield"
 >
-<smform:SmartForm id="smartform2">
+<smform:SmartForm id="smartform2" editable="{data>/isEditable}">
                                         <smform:Group>
                                             <smform:GroupElement>
                                                 <smfield:SmartField

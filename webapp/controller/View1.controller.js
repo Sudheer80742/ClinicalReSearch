@@ -66,10 +66,10 @@ sap.ui.define([
                 var oSmart = this.byId("smarttable");
                 var oTable = oSmart.getTable();
                 var oSelected = oTable.getSelectedItems();
-                var oSelect=this.byId("del1")
+                this.oSelect=this.byId("del1")
                 if(oSelected.length>0){
-                    oSelect.setEnabled(true)
-                }else{oSelect.setEnabled(false)}
+                    this.oSelect.setEnabled(true)
+                }else{this.oSelect.setEnabled(false)}
             },
             onDelete() {
                 var oSmart = this.byId("smarttable");
@@ -84,6 +84,7 @@ sap.ui.define([
                     this._owner.remove(oBinding, {
                         success: (oData) => {
                             MessageToast.show("Data Deleted successfully")
+                            this.oSelect.setEnabled(false)
                         },
                         error: (oError) => {
                             MessageToast.show("Error", oError);

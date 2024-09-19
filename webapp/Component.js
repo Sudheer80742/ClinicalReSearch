@@ -12,7 +12,11 @@ sap.ui.define([
 
         return UIComponent.extend("rbx.107.clinicalresearcher.Component", {
             metadata: {
-                manifest: "json"
+                manifest: "json",
+                config:{
+                fullWidth:true,
+                fullHeight:true
+            }
             },
 
             /**
@@ -29,6 +33,7 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+                // sap.ui.getCore().applyTheme("sap_belize_plus")
             }
         });
     }

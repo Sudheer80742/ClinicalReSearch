@@ -1,9 +1,30 @@
 <mvc:View
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true" controllerName="rbx.107.clinicalresearcher.controller.View1"
     xmlns:sm="sap.ui.comp.smarttable"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content >
+    xmlns="sap.uxap"
+    xmlns:m="sap.m">
+    <m:Page id="page" title="{i18n>title}">
+        <m:content >
+            <ObjectPageLayout>
+            <headerTitle>
+            <ObjectPageDynamicHeaderTitle >
+                <heading>
+                <m:Title text="Filter Bar"/>
+                </heading>
+            </ObjectPageDynamicHeaderTitle>
+            </headerTitle>
+            <headerContent>
+                <m:Toolbar >
+                <m:SearchField search="onSearch" width="40%"/>
+                <m:ToolbarSpacer />
+                 <m:Button icon="sap-icon://sort" press="onSort"/>
+                 </m:Toolbar>
+            </headerContent>
+            <sections>
+            <ObjectPageSection >
+            <subSections>
+            <ObjectPageSubSection >
+            <blocks>
             <sm:SmartTable 
             entitySet="CRGendata"
             enableAutoBinding="true"
@@ -11,21 +32,26 @@
             id="smarttable"
             >
             <sm:customToolbar>
-                <Toolbar >
-                <Title text="Clinical Research"/>
-                <SearchField search="onSearch" width="40%"/>
-                <ToolbarSpacer ></ToolbarSpacer>
-                <Button icon="sap-icon://sort" press="onSort"/> 
-                <Button icon="sap-icon://add" press="onAdd"/>
-                <Button icon="sap-icon://delete" press="onDelete" enabled="false" id="del1"/>
-                </Toolbar>
+                <m:Toolbar >
+                <m:Title text="Clinical Research"/>
+                <m:ToolbarSpacer />
+               
+                <m:Button icon="sap-icon://add" press="onAdd"/>
+                <m:Button icon="sap-icon://delete" press="onDelete" enabled="false" id="del1"/>
+                </m:Toolbar>
             </sm:customToolbar>
-            <Table mode="MultiSelect" selectionChange="onSelectionItem">
-            <ColumnListItem type="Active" press="onColumnListItemPress"/>
-            </Table>
+            <m:Table mode="MultiSelect" selectionChange="onSelectionItem">
+            <m:ColumnListItem type="Active" press="onColumnListItemPress"/>
+            </m:Table>
             </sm:SmartTable>
-        </content>
-    </Page>
+            </blocks>
+            </ObjectPageSubSection>
+            </subSections>
+            </ObjectPageSection>
+            </sections>
+            </ObjectPageLayout>
+        </m:content>
+    </m:Page>
 </mvc:View>
 
 

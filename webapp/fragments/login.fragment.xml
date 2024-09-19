@@ -4,7 +4,15 @@
     xmlns:smform="sap.ui.comp.smartform"
     xmlns:smfield="sap.ui.comp.smartfield"
 >
+
     <smform:SmartForm id="smartform4">
+        <smform:layout>
+            <smform:ColumnLayout
+                columnsM="2"
+                columnsL="3"
+                columnsXL="4"
+            />
+        </smform:layout>
                                         <smform:Group>
                                             <smform:GroupElement>
                                                 <smfield:SmartField
